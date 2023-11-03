@@ -55,7 +55,7 @@ jobs:
           ${{ steps.version_info.outputs.version_info }}
         draft: true
         prerelease: false
-  
+
   build-aseprite:
     name: Build Aseprite
     needs: check-version
@@ -133,3 +133,4 @@ jobs:
           asset_path: aseprite/build/bin/Aseprite-${{ needs.check-version.outputs.latest_tag }}-${{ runner.os }}.zip
           asset_name: Aseprite-${{ needs.check-version.outputs.latest_tag }}-${{ runner.os }}.zip
           asset_content_type: application/zip
+          
